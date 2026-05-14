@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services SEO & SEA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f8f7f4;
+      color:#111;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      padding:30px 0;
+      position:relative;
+      z-index:10;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo-circle{
+      width:28px;
+      height:28px;
+      border-radius:50%;
+    }
+
+    .logo-circle.black{
+      border:3px solid #111;
+      background:white;
+    }
+
+    .logo-circle.yellow{
+      background:#FFD400;
+      border:3px solid #111;
+    }
+
+    .logo-text{
+      font-size:14px;
+      font-style:italic;
+    }
+
+    nav{
+      display:flex;
+      gap:40px;
+      font-weight:600;
+    }
+
+    nav a{
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#1E40FF;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      position:relative;
+      padding:40px 0 80px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-family:'Anton', sans-serif;
+      font-size:140px;
+      line-height:1;
+      letter-spacing:2px;
+      color:#111;
+      margin-bottom:40px;
+    }
+
+    .shape{
+      position:absolute;
+      z-index:-1;
+      border-radius:50%;
+      filter:blur(0px);
+    }
+
+    .shape.blue{
+      background:#1E40FF;
+    }
+
+    .shape.yellow{
+      background:#FFD400;
+    }
+
+    .shape.one{
+      width:300px;
+      height:300px;
+      top:-80px;
+      left:-120px;
+      border-radius:40% 60% 60% 40%;
+    }
+
+    .shape.two{
+      width:250px;
+      height:250px;
+      top:100px;
+      right:-120px;
+      border-radius:60% 40% 40% 60%;
+    }
+
+    .shape.three{
+      width:220px;
+      height:220px;
+      bottom:0;
+      left:-100px;
+      border-radius:60% 40% 50% 50%;
+    }
+
+    .shape.four{
+      width:280px;
+      height:280px;
+      bottom:-100px;
+      right:-120px;
+      border-radius:40% 60% 50% 50%;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section{
+      padding:60px 0;
+      position:relative;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title h2{
+      font-family:'Anton', sans-serif;
+      font-size:72px;
+      color:#1E40FF;
+      letter-spacing:1px;
+      display:inline-block;
+      position:relative;
+    }
+
+    .section-title h2::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:5px;
+      width:100%;
+      height:10px;
+      background:#FFD400;
+      z-index:-1;
+    }
+
+    .section-description{
+      max-width:800px;
+      margin:0 auto 60px;
+      background:white;
+      border:2px solid #d9d9d9;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      font-size:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:40px;
+    }
+
+    .card{
+      background:white;
+      border-radius:30px;
+      padding:35px;
+      position:relative;
+      overflow:hidden;
+      border:3px solid #efefef;
+      transition:0.3s;
+      min-height:520px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card.yellow{
+      border-color:#FFD400;
+    }
+
+    .card.blue{
+      border-color:#1E40FF;
+    }
+
+    .card-top{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:14px;
+    }
+
+    .card.yellow .card-top{
+      background:#FFD400;
+    }
+
+    .card.blue .card-top{
+      background:#1E40FF;
+    }
+
+    .card h3{
+      font-family:'Anton', sans-serif;
+      font-size:42px;
+      margin-bottom:30px;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .card ul{
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+      margin-top:30px;
+    }
+
+    .card ul li{
+      position:relative;
+      padding-left:35px;
+      font-size:18px;
+      line-height:1.5;
+    }
+
+    .card ul li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      background:#1E40FF;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      font-weight:bold;
+    }
+
+    .card-footer{
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      height:70px;
+      clip-path:polygon(0 100%,100% 40%,100% 100%);
+    }
+
+    .card.yellow .card-footer{
+      background:#FFD400;
+    }
+
+    .card.blue .card-footer{
+      background:#1E40FF;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta{
+      margin-top:100px;
+      background:#0D1B5E;
+      border-radius:30px;
+      padding:50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+      color:white;
+      flex-wrap:wrap;
+    }
+
+    .cta h3{
+      font-family:'Anton', sans-serif;
+      font-size:52px;
+      line-height:1.1;
+    }
+
+    .cta-btn{
+      background:#FFD400;
+      color:#111;
+      padding:20px 40px;
+      border-radius:999px;
+      font-weight:700;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .cta-btn:hover{
+      transform:scale(1.05);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:1100px){
+
+      .hero h1{
+        font-size:100px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        min-height:auto;
+        padding-bottom:100px;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        gap:20px;
+        font-size:14px;
+      }
+
+      .hero h1{
+        font-size:72px;
+      }
+
+      .section-title h2{
+        font-size:52px;
+      }
+
+      .section-description{
+        font-size:16px;
+      }
+
+      .cta{
+        text-align:center;
+        justify-content:center;
+      }
+
+      .cta h3{
+        font-size:38px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- SHAPES -->
+  <div class="shape blue one"></div>
+  <div class="shape yellow two"></div>
+  <div class="shape yellow three"></div>
+  <div class="shape blue four"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <div class="logo">
+        <div class="logo-circle black"></div>
+        <div class="logo-circle yellow"></div>
+        <div class="logo-text">Adaptabilité</div>
+      </div>
+
+      <nav>
+        <a href="#">Services</a>
+        <a href="#">À propos</a>
+        <a href="#">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>SERVICES</h1>
+    </div>
+  </section>
+
+  <!-- SEO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>SERVICES SEO</h2>
+      </div>
+
+      <div class="section-description">
+        (Search Engine Optimization) - Maximisez les visites vers votre site grâce à son référencement naturel.
+      </div>
+
+      <div class="cards">
+
+        <div class="card yellow">
+          <div class="card-top"></div>
+
+          <h3>SEO BASIC</h3>
+
+          <ul>
+            <li>Analyse des performances avec l’outil</li>
+            <li>Envoi des rapports d’analyses mensuels</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card blue">
+          <div class="card-top"></div>
+
+          <h3>SEO MEDIUM</h3>
+
+          <ul>
+            <li>Analyse des performances avec l’outil</li>
+            <li>Définition d’une stratégie sur mesure</li>
+            <li>Modification ou envoi des suggestions de modification</li>
+            <li>Suivis des performances et rapports mensuels</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card yellow">
+          <div class="card-top"></div>
+
+          <h3>SEO PREMIUM</h3>
+
+          <ul>
+            <li>Analyse des performances avec l’outil</li>
+            <li>Définition d’une stratégie sur mesure</li>
+            <li>Suggestions d’amélioration SEO avancées</li>
+            <li>Optimisation continue et rapports détaillés</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEA -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>SERVICES SEA</h2>
+      </div>
+
+      <div class="section-description">
+        (Search Engine Advertising) - Maximisez les visites vers votre site grâce aux publicités qui parlent de vous.
+      </div>
+
+      <div class="cards">
+
+        <div class="card blue">
+          <div class="card-top"></div>
+
+          <h3>SEA BASIC</h3>
+
+          <ul>
+            <li>Analyse des performances avec l’outil</li>
+            <li>Rapports d’analyses mensuels</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card yellow">
+          <div class="card-top"></div>
+
+          <h3>SEA MEDIUM</h3>
+
+          <ul>
+            <li>Création de campagnes publicitaires</li>
+            <li>Optimisation des annonces</li>
+            <li>Suivi des conversions</li>
+            <li>Rapports mensuels détaillés</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card blue">
+          <div class="card-top"></div>
+
+          <h3>SEA PREMIUM</h3>
+
+          <ul>
+            <li>Gestion publicitaire complète</li>
+            <li>Optimisation continue du ROI</li>
+            <li>Stratégie avancée d’acquisition</li>
+            <li>Accompagnement personnalisé</li>
+          </ul>
+
+          <div class="card-footer"></div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="cta">
+
+        <h3>
+          PRÊT À BOOSTER<br>
+          VOTRE VISIBILITÉ ?
+        </h3>
+
+        <a href="#" class="cta-btn">
+          CONTACTEZ-NOUS →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
