@@ -1,416 +1,582 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services SEO & SEA</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Services IA, SEO & SEA</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
     <style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        /* =========================
+           RÉINITIALISATION
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        body{
-            font-family:'Poppins', sans-serif;
-            background:#f8f7f4;
-            color:#111;
-            overflow-x:hidden;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f7f4;
+            color: #111;
+            overflow-x: hidden;
         }
 
-        a{
-            text-decoration:none;
-            color:inherit;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        .container{
-            width:90%;
-            max-width:1300px;
-            margin:auto;
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
         }
 
         /* =========================
-           BACKGROUND SHAPES
+           FORMES D’ARRIÈRE-PLAN
         ========================= */
 
-        .shape{
-            position:fixed;
-            z-index:-1;
-            border-radius:50%;
-            opacity:1;
+        .shape {
+            position: fixed;
+            z-index: -1;
+            border-radius: 50%;
+            opacity: 1;
         }
 
-        .shape.blue{
-            background:#1f45ff;
+        .shape.blue {
+            background: #1f45ff;
         }
 
-        .shape.yellow{
-            background:#ffd400;
+        .shape.yellow {
+            background: #ffd400;
         }
 
-        .shape.one{
-            width:320px;
-            height:320px;
-            top:-100px;
-            left:-120px;
-            border-radius:45% 55% 65% 35%;
+        .shape.one {
+            width: 320px;
+            height: 320px;
+            top: -100px;
+            left: -120px;
+            border-radius: 45% 55% 65% 35%;
         }
 
-        .shape.two{
-            width:280px;
-            height:280px;
-            top:180px;
-            right:-120px;
-            border-radius:55% 45% 35% 65%;
+        .shape.two {
+            width: 280px;
+            height: 280px;
+            top: 180px;
+            right: -120px;
+            border-radius: 55% 45% 35% 65%;
         }
 
-        .shape.three{
-            width:240px;
-            height:240px;
-            bottom:100px;
-            left:-100px;
-            border-radius:60% 40% 55% 45%;
+        .shape.three {
+            width: 240px;
+            height: 240px;
+            bottom: 100px;
+            left: -100px;
+            border-radius: 60% 40% 55% 45%;
         }
 
-        .shape.four{
-            width:300px;
-            height:300px;
-            bottom:-100px;
-            right:-100px;
-            border-radius:40% 60% 45% 55%;
+        .shape.four {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: -100px;
+            border-radius: 40% 60% 45% 55%;
         }
 
         /* =========================
-           HEADER
+           EN-TÊTE
         ========================= */
 
-        header{
-            padding:30px 0;
+        header {
+            padding: 25px 0;
         }
 
-        .navbar{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .logo{
-            display:flex;
-            align-items:center;
-            gap:12px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .logo-circle{
-            width:28px;
-            height:28px;
-            border-radius:50%;
+        .logo-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
         }
 
-        .logo-circle.black{
-            border:3px solid #111;
-            background:white;
+        .logo-circle.black {
+            border: 3px solid #111;
+            background: white;
         }
 
-        .logo-circle.yellow{
-            background:#ffd400;
-            border:3px solid #111;
+        .logo-circle.yellow {
+            background: #ffd400;
+            border: 3px solid #111;
         }
 
-        .logo-text{
-            font-style:italic;
-            font-size:14px;
+        .logo-text {
+            font-style: italic;
+            font-size: 14px;
         }
 
-        nav{
-            display:flex;
-            gap:40px;
-            font-weight:600;
+        nav {
+            display: flex;
+            gap: 40px;
+            font-weight: 600;
         }
 
-        nav a{
-            transition:0.3s;
+        nav a {
+            transition: 0.3s;
         }
 
-        nav a:hover{
-            color:#1f45ff;
+        nav a:hover {
+            color: #1f45ff;
         }
 
         /* =========================
-           HERO
+           TITRE PRINCIPAL
         ========================= */
 
-        .hero{
-            text-align:center;
-            padding:40px 0 80px;
+        .hero {
+            text-align: center;
+            padding: 30px 0 60px;
         }
 
-        .hero h1{
-            font-family:'Anton', sans-serif;
-            font-size:140px;
-            letter-spacing:2px;
-            line-height:1;
+        .hero h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 120px;
+            letter-spacing: 2px;
+            line-height: 1;
         }
 
         /* =========================
            SECTIONS
         ========================= */
 
-        .section{
-            padding:50px 0;
+        .section {
+            padding: 40px 0;
         }
 
-        .section-title{
-            text-align:center;
-            margin-bottom:30px;
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
         }
 
-        .section-title h2{
-            font-family:'Anton', sans-serif;
-            font-size:70px;
-            color:#1f45ff;
-            display:inline-block;
-            position:relative;
+        .section-title h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 60px;
+            color: #1f45ff;
+            display: inline-block;
+            position: relative;
         }
 
-        .section-title h2::after{
-            content:"";
-            position:absolute;
-            width:100%;
-            height:10px;
-            background:#ffd400;
-            left:0;
-            bottom:8px;
-            z-index:-1;
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 9px;
+            background: #ffd400;
+            left: 0;
+            bottom: 7px;
+            z-index: -1;
         }
 
-        .section-description{
-            max-width:850px;
-            margin:0 auto 60px;
-            background:white;
-            padding:25px;
-            border-radius:20px;
-            border:2px solid #ddd;
-            text-align:center;
-            font-size:20px;
-            box-shadow:0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(3, 1fr);
-            gap:40px;
-        }
-
-        .card{
-            background:white;
-            border-radius:30px;
-            overflow:hidden;
-            position:relative;
-            box-shadow:0 15px 40px rgba(0,0,0,0.08);
-            transition:0.3s;
-            display:flex;
-            flex-direction:column;
-            min-height:650px;
-        }
-
-        .card:hover{
-            transform:translateY(-10px);
-        }
-
-        .card.yellow{
-            border:3px solid #ffd400;
-        }
-
-        .card.blue{
-            border:3px solid #1f45ff;
-        }
-
-        .card-header{
-            padding:30px;
-            text-align:center;
-        }
-
-        .card.yellow .card-header{
-            background:#ffd400;
-        }
-
-        .card.blue .card-header{
-            background:#1f45ff;
-            color:white;
-        }
-
-        .card-header h3{
-            font-family:'Anton', sans-serif;
-            font-size:40px;
-            letter-spacing:1px;
-            margin-bottom:10px;
-        }
-
-        .price{
-            font-size:50px;
-            font-weight:700;
-            line-height:1;
-        }
-
-        .price span{
-            font-size:18px;
-            font-weight:500;
-        }
-
-        .card-content{
-            padding:35px;
-            flex:1;
-        }
-
-        .card-content ul{
-            list-style:none;
-            display:flex;
-            flex-direction:column;
-            gap:22px;
-        }
-
-        .card-content ul li{
-            position:relative;
-            padding-left:35px;
-            font-size:17px;
-            line-height:1.5;
-        }
-
-        .card-content ul li::before{
-            content:"✓";
-            position:absolute;
-            left:0;
-            top:0;
-            width:22px;
-            height:22px;
-            border-radius:50%;
-            background:#1f45ff;
-            color:white;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:12px;
-            font-weight:bold;
-        }
-
-        .card-footer{
-            padding:30px;
-            text-align:center;
-        }
-
-        .btn{
-            display:inline-block;
-            padding:16px 32px;
-            border-radius:999px;
-            font-weight:700;
-            transition:0.3s;
-        }
-
-        .card.yellow .btn{
-            background:#ffd400;
-            color:#111;
-        }
-
-        .card.blue .btn{
-            background:#1f45ff;
-            color:white;
-        }
-
-        .btn:hover{
-            transform:scale(1.05);
+        .section-description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            border: 2px solid #ddd;
+            text-align: center;
+            font-size: 17px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
         /* =========================
-           CTA
+           GRILLE DES OFFRES
         ========================= */
 
-        .cta{
-            margin-top:100px;
-            background:#0c1d68;
-            border-radius:35px;
-            padding:60px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:40px;
-            color:white;
-            flex-wrap:wrap;
-        }
-
-        .cta h3{
-            font-family:'Anton', sans-serif;
-            font-size:60px;
-            line-height:1.1;
-        }
-
-        .cta-btn{
-            background:#ffd400;
-            color:#111;
-            padding:20px 40px;
-            border-radius:999px;
-            font-weight:700;
-            font-size:18px;
-            transition:0.3s;
-        }
-
-        .cta-btn:hover{
-            transform:scale(1.05);
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            align-items: stretch;
         }
 
         /* =========================
-           RESPONSIVE
+           CADRES DES OFFRES
         ========================= */
 
-        @media(max-width:1100px){
+        .card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
 
-            .cards{
-                grid-template-columns:1fr;
+            display: flex;
+            flex-direction: column;
+
+            min-height: 500px;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .card.yellow {
+            border: 3px solid #ffd400;
+        }
+
+        .card.blue {
+            border: 3px solid #1f45ff;
+        }
+
+        /* =========================
+           BANDEAU POPULAIRE
+        ========================= */
+
+        .popular-ribbon {
+            position: absolute;
+            z-index: 5;
+            left: -12%;
+            top: 69%;
+            width: 124%;
+            padding: 7px 10px;
+
+            background: #ffd400;
+            color: #111;
+
+            font-family: 'Anton', sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+
+            transform: rotate(-6deg);
+            pointer-events: none;
+        }
+
+        /* =========================
+           EN-TÊTE DES OFFRES
+        ========================= */
+
+        .card-header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card.yellow .card-header {
+            background: #ffd400;
+        }
+
+        .card.blue .card-header {
+            background: #1f45ff;
+            color: white;
+        }
+
+        .card-header h3 {
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .price span {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* =========================
+           CONTENU DES OFFRES
+        ========================= */
+
+        .card-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .card-content ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .card-content ul li {
+            position: relative;
+            padding-left: 31px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .card-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 20px;
+            height: 20px;
+
+            border-radius: 50%;
+            background: #1f45ff;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           PIED DES OFFRES
+        ========================= */
+
+        .card-footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform 0.3s;
+        }
+
+        .card.yellow .btn {
+            background: #ffd400;
+            color: #111;
+        }
+
+        .card.blue .btn {
+            background: #1f45ff;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           APPEL À L’ACTION
+        ========================= */
+
+        .cta {
+            margin-top: 70px;
+            background: #0c1d68;
+            border-radius: 28px;
+            padding: 45px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .cta h3 {
+            font-family: 'Anton', sans-serif;
+            font-size: 50px;
+            line-height: 1.1;
+        }
+
+        .cta-btn {
+            background: #ffd400;
+            color: #111;
+            padding: 16px 32px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           TABLETTES
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .container {
+                max-width: 750px;
             }
 
-            .hero h1{
-                font-size:100px;
+            .cards {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .card {
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 90px;
             }
 
         }
 
-        @media(max-width:768px){
+        /* =========================
+           MOBILES
+        ========================= */
 
-            nav{
-                gap:20px;
-                font-size:14px;
+        @media (max-width: 768px) {
+
+            header {
+                padding: 20px 0;
             }
 
-            .hero h1{
-                font-size:70px;
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
             }
 
-            .section-title h2{
-                font-size:50px;
+            nav {
+                gap: 20px;
+                font-size: 14px;
             }
 
-            .section-description{
-                font-size:16px;
+            .hero {
+                padding: 25px 0 45px;
             }
 
-            .cta{
-                text-align:center;
-                justify-content:center;
+            .hero h1 {
+                font-size: 65px;
             }
 
-            .cta h3{
-                font-size:40px;
+            .section {
+                padding: 30px 0;
+            }
+
+            .section-title h2 {
+                font-size: 45px;
+            }
+
+            .section-description {
+                margin-bottom: 30px;
+                padding: 18px;
+                font-size: 15px;
+            }
+
+            .cards {
+                gap: 20px;
+            }
+
+            .card {
+                border-radius: 18px;
+            }
+
+            .card-header {
+                padding: 18px;
+            }
+
+            .card-header h3 {
+                font-size: 29px;
+            }
+
+            .price {
+                font-size: 36px;
+            }
+
+            .card-content {
+                padding: 22px;
+            }
+
+            .card-content ul {
+                gap: 12px;
+            }
+
+            .card-footer {
+                padding: 18px;
+            }
+
+            .cta {
+                margin-top: 50px;
+                padding: 35px 25px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .cta h3 {
+                font-size: 38px;
+            }
+
+        }
+
+        /* =========================
+           PETITS MOBILES
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .section-title h2 {
+                font-size: 38px;
+            }
+
+            .card-header h3 {
+                font-size: 27px;
+            }
+
+            .price {
+                font-size: 34px;
+            }
+
+            .card-content ul li {
+                font-size: 14px;
+            }
+
+            .cta h3 {
+                font-size: 32px;
             }
 
         }
@@ -421,21 +587,28 @@
 
 <body>
 
-    <!-- BACKGROUND -->
+    <!-- FORMES D’ARRIÈRE-PLAN -->
+
     <div class="shape blue one"></div>
     <div class="shape yellow two"></div>
     <div class="shape yellow three"></div>
     <div class="shape blue four"></div>
 
-    <!-- HEADER -->
+    <!-- EN-TÊTE -->
+
     <header>
 
         <div class="container navbar">
 
             <div class="logo">
+
                 <div class="logo-circle black"></div>
                 <div class="logo-circle yellow"></div>
-                <div class="logo-text">Adaptabilité</div>
+
+                <div class="logo-text">
+                    Adaptabilité
+                </div>
+
             </div>
 
             <nav>
@@ -448,7 +621,8 @@
 
     </header>
 
-    <!-- HERO -->
+    <!-- TITRE PRINCIPAL -->
+
     <section class="hero">
 
         <div class="container">
@@ -457,104 +631,146 @@
 
     </section>
 
-    <!-- SEO -->
+    <!-- SERVICES IA -->
+
     <section class="section">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>SERVICES SEO</h2>
+                <h2>SERVICES IA</h2>
             </div>
 
             <div class="section-description">
-                (Search Engine Optimization) - Maximisez les visites vers votre site grâce à son référencement naturel.
+                Maximisez votre visibilité auprès des moteurs de recherche utilisant l’intelligence artificielle.
             </div>
 
             <div class="cards">
 
-                <!-- CARD -->
+                <!-- OFFRE IA POPULAIRE -->
+
                 <div class="card yellow">
 
+                    <div class="popular-ribbon">
+                        POPULAIRE
+                    </div>
+
                     <div class="card-header">
-                        <h3>SEO BASIC</h3>
+
+                        <h3>POPULAIRE</h3>
 
                         <div class="price">
-                            99€<span>/mois</span>
+                            20€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Analyse des performances avec l’outil</li>
-                            <li>Rapports d’analyses mensuels</li>
-                            <li>Suivi du référencement naturel</li>
-                            <li>Conseils d’amélioration SEO</li>
+                            <li>
+                                Analyse du référencement auprès des moteurs de recherche utilisant l’intelligence artificielle
+                            </li>
+
+                            <li>
+                                Envoi d’un rapport d’analyse
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
 
-                <!-- CARD -->
+                <!-- IA MEDIUM -->
+
                 <div class="card blue">
 
                     <div class="card-header">
-                        <h3>SEO MEDIUM</h3>
+
+                        <h3>IA MEDIUM</h3>
 
                         <div class="price">
-                            249€<span>/mois</span>
+                            50€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Analyse des performances avec l’outil</li>
-                            <li>Définition d’une stratégie SEO</li>
-                            <li>Optimisation des pages du site</li>
-                            <li>Suggestions de modifications</li>
-                            <li>Rapports détaillés mensuels</li>
+                            <li>
+                                Analyse du référencement auprès des moteurs de recherche utilisant l’intelligence artificielle
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil et envoi des rapports d’analyses mensuels
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
 
-                <!-- CARD -->
+                <!-- IA PREMIUM -->
+
                 <div class="card yellow">
 
                     <div class="card-header">
-                        <h3>SEO PREMIUM</h3>
+
+                        <h3>IA PREMIUM</h3>
 
                         <div class="price">
-                            499€<span>/mois</span>
+                            200€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Stratégie SEO complète</li>
-                            <li>Optimisation avancée</li>
-                            <li>Audit technique du site</li>
-                            <li>Suivi des performances avancé</li>
-                            <li>Accompagnement personnalisé</li>
-                            <li>Rapports premium détaillés</li>
+                            <li>
+                                Analyse du référencement auprès des moteurs de recherche utilisant l’intelligence artificielle
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil, envoi des rapports d’analyses mensuels, amélioration ou envoi des suggestions de modification
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
@@ -565,7 +781,8 @@
 
     </section>
 
-    <!-- SEA -->
+    <!-- SERVICES SEA -->
+
     <section class="section">
 
         <div class="container">
@@ -580,96 +797,284 @@
 
             <div class="cards">
 
-                <!-- CARD -->
+                <!-- SEA BASIC -->
+
                 <div class="card blue">
 
+                    <div class="popular-ribbon">
+                        POPULAIRE
+                    </div>
+
                     <div class="card-header">
+
                         <h3>SEA BASIC</h3>
 
                         <div class="price">
-                            149€<span>/mois</span>
+                            20€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Analyse des campagnes</li>
-                            <li>Suivi des performances</li>
-                            <li>Rapports mensuels</li>
-                            <li>Conseils d’optimisation</li>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Envoi des rapports d’analyses mensuels
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
 
-                <!-- CARD -->
+                <!-- SEA MEDIUM -->
+
                 <div class="card yellow">
 
                     <div class="card-header">
+
                         <h3>SEA MEDIUM</h3>
 
                         <div class="price">
-                            349€<span>/mois</span>
+                            80€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Création de campagnes publicitaires</li>
-                            <li>Optimisation des annonces</li>
-                            <li>Suivi des conversions</li>
-                            <li>Optimisation du budget</li>
-                            <li>Rapports détaillés</li>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil et envoi des rapports d’analyses mensuels
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
 
-                <!-- CARD -->
+                <!-- SEA PREMIUM -->
+
                 <div class="card blue">
 
                     <div class="card-header">
+
                         <h3>SEA PREMIUM</h3>
 
                         <div class="price">
-                            699€<span>/mois</span>
+                            300€<span>/mois</span>
                         </div>
+
                     </div>
 
                     <div class="card-content">
 
                         <ul>
-                            <li>Gestion publicitaire complète</li>
-                            <li>Stratégie marketing avancée</li>
-                            <li>Optimisation continue du ROI</li>
-                            <li>Accompagnement personnalisé</li>
-                            <li>Analyse avancée des performances</li>
-                            <li>Support prioritaire</li>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil, envoi des rapports d’analyses mensuels, amélioration ou envoi des suggestions de modification
+                            </li>
                         </ul>
 
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="btn">Choisir l’offre</a>
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- CTA -->
+        </div>
+
+    </section>
+
+    <!-- SERVICES SEO -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>SERVICES SEO</h2>
+            </div>
+
+            <div class="section-description">
+                (Search Engine Optimization) - Maximisez les visites vers votre site grâce à son référencement naturel.
+            </div>
+
+            <div class="cards">
+
+                <!-- SEO BASIC -->
+
+                <div class="card yellow">
+
+                    <div class="card-header">
+
+                        <h3>SEO BASIC</h3>
+
+                        <div class="price">
+                            20€<span>/mois</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Envoi des rapports d’analyses mensuels
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- SEO MEDIUM -->
+
+                <div class="card blue">
+
+                    <div class="card-header">
+
+                        <h3>SEO MEDIUM</h3>
+
+                        <div class="price">
+                            80€<span>/mois</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil et envoi des rapports d’analyses mensuels
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- SEO PREMIUM -->
+
+                <div class="card yellow">
+
+                    <div class="card-header">
+
+                        <h3>SEO PREMIUM</h3>
+
+                        <div class="price">
+                            80€<span>/mois</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>
+                                Analyse des performances avec l’outil
+                            </li>
+
+                            <li>
+                                Définition d’une stratégie sur mesure
+                            </li>
+
+                            <li>
+                                Modification ou envoi des suggestions de modification
+                            </li>
+
+                            <li>
+                                Suivi des performances avec l’outil, envoi des rapports d’analyses mensuels, amélioration ou envoi des suggestions de modification
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="#" class="btn">
+                            Choisir l’offre
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- APPEL À L’ACTION -->
+
             <div class="cta">
 
                 <h3>
@@ -690,3 +1095,4 @@
 </body>
 
 </html>
+```
