@@ -565,6 +565,390 @@
 
         }
 
+
+        /* =========================
+           THÈME ALTERNATIF — NOCTURNE PREMIUM
+        ========================= */
+
+        :root {
+            --theme-bg: #070913;
+            --theme-bg-soft: #0d1020;
+            --theme-surface: rgba(18, 22, 42, 0.72);
+            --theme-surface-strong: rgba(21, 26, 51, 0.94);
+            --theme-border: rgba(255, 255, 255, 0.12);
+            --theme-text: #f7f8ff;
+            --theme-muted: #b7bed9;
+            --theme-cyan: #66e8ff;
+            --theme-blue: #6b7cff;
+            --theme-purple: #9a6cff;
+            --theme-pink: #ff6ec7;
+            --theme-gold: #ffd477;
+            --theme-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+        }
+
+        body.theme-night {
+            color: var(--theme-text);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(107, 124, 255, 0.18), transparent 30%),
+                radial-gradient(circle at 88% 22%, rgba(255, 110, 199, 0.12), transparent 28%),
+                radial-gradient(circle at 50% 82%, rgba(102, 232, 255, 0.09), transparent 34%),
+                linear-gradient(180deg, #070913 0%, #0a0d1a 52%, #060812 100%);
+            background-attachment: fixed;
+        }
+
+        body.theme-night::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            pointer-events: none;
+            opacity: 0.23;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(to bottom, black, transparent 92%);
+        }
+
+        body.theme-night ::selection {
+            background: var(--theme-purple);
+            color: #fff;
+        }
+
+        body.theme-night .shape {
+            opacity: 0.72;
+            filter: blur(18px) saturate(145%);
+            mix-blend-mode: screen;
+            box-shadow: 0 0 90px currentColor;
+        }
+
+        body.theme-night .shape.blue {
+            color: var(--theme-cyan);
+            background: linear-gradient(135deg, var(--theme-blue), var(--theme-cyan));
+        }
+
+        body.theme-night .shape.yellow {
+            color: var(--theme-pink);
+            background: linear-gradient(135deg, var(--theme-purple), var(--theme-pink));
+        }
+
+        body.theme-night header {
+            background: rgba(7, 9, 19, 0.58);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .logo-circle.theme-control {
+            padding: 0;
+            appearance: none;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .logo-circle.theme-control:hover,
+        .logo-circle.theme-control:focus-visible {
+            transform: scale(1.12);
+            outline: 3px solid #1f45ff;
+            outline-offset: 3px;
+        }
+
+        body.theme-night .logo-circle {
+            box-shadow: 0 0 22px rgba(102, 232, 255, 0.18);
+        }
+
+        body.theme-night .logo-circle.black {
+            border-color: rgba(255, 255, 255, 0.82);
+            background: transparent;
+        }
+
+        body.theme-night .logo-circle.yellow {
+            border-color: rgba(255, 255, 255, 0.16);
+            background: linear-gradient(135deg, var(--theme-purple), var(--theme-cyan));
+            box-shadow: 0 0 26px rgba(154, 108, 255, 0.48);
+        }
+
+        body.theme-night .logo-text {
+            color: var(--theme-muted);
+            letter-spacing: 0.08em;
+        }
+
+        body.theme-night nav a {
+            color: #dce1f4;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        body.theme-night nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 1px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--theme-cyan), var(--theme-purple));
+            border-radius: 999px;
+            transition: right 0.3s ease;
+        }
+
+        body.theme-night nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 18px rgba(102, 232, 255, 0.45);
+        }
+
+        body.theme-night nav a:hover::after {
+            right: 0;
+        }
+
+        body.theme-night .hero h1 {
+            color: transparent;
+            background: linear-gradient(110deg, #ffffff 10%, #cfd7ff 40%, var(--theme-cyan) 68%, var(--theme-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            filter: drop-shadow(0 12px 34px rgba(107, 124, 255, 0.24));
+            text-shadow: 0 0 70px rgba(102, 232, 255, 0.11);
+        }
+
+        body.theme-night .section-title h2 {
+            color: #fff;
+            text-shadow: 0 0 32px rgba(107, 124, 255, 0.22);
+        }
+
+        body.theme-night .section-title h2::after {
+            height: 4px;
+            bottom: -5px;
+            z-index: 0;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, var(--theme-cyan), var(--theme-purple), transparent);
+            box-shadow: 0 0 18px rgba(102, 232, 255, 0.44);
+        }
+
+        body.theme-night .section-description {
+            color: var(--theme-muted);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+            border: 1px solid var(--theme-border);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 18px 55px rgba(0, 0, 0, 0.24);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        body.theme-night .card {
+            isolation: isolate;
+            color: var(--theme-text);
+            background: linear-gradient(145deg, rgba(28, 34, 64, 0.86), rgba(11, 14, 29, 0.92));
+            border: 1px solid var(--theme-border) !important;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), var(--theme-shadow);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+        }
+
+        body.theme-night .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.78;
+            background: radial-gradient(circle at 15% 5%, rgba(255, 255, 255, 0.09), transparent 25%), linear-gradient(140deg, rgba(255, 255, 255, 0.035), transparent 45%);
+        }
+
+        body.theme-night .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+
+        body.theme-night .card.yellow::after {
+            background: radial-gradient(circle at 50% 0%, rgba(255, 110, 199, 0.22), transparent 48%);
+        }
+
+        body.theme-night .card.blue::after {
+            background: radial-gradient(circle at 50% 0%, rgba(102, 232, 255, 0.22), transparent 48%);
+        }
+
+        body.theme-night .card:hover {
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 30px 85px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(255, 255, 255, 0.06);
+        }
+
+        body.theme-night .card:hover::after {
+            opacity: 1;
+        }
+
+        body.theme-night .card.yellow:hover {
+            border-color: rgba(255, 110, 199, 0.52) !important;
+        }
+
+        body.theme-night .card.blue:hover {
+            border-color: rgba(102, 232, 255, 0.52) !important;
+        }
+
+        body.theme-night .popular-ribbon {
+            color: #070913;
+            background: linear-gradient(90deg, var(--theme-cyan), #ffffff, var(--theme-purple));
+            box-shadow: 0 10px 35px rgba(102, 232, 255, 0.26);
+            text-shadow: none;
+        }
+
+        body.theme-night .card-header {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        body.theme-night .card-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.09), transparent 48%);
+        }
+
+        body.theme-night .card.yellow .card-header {
+            color: #fff;
+            background: linear-gradient(135deg, rgba(154, 108, 255, 0.72), rgba(255, 110, 199, 0.42));
+        }
+
+        body.theme-night .card.blue .card-header {
+            color: #fff;
+            background: linear-gradient(135deg, rgba(35, 70, 170, 0.82), rgba(102, 232, 255, 0.34));
+        }
+
+        body.theme-night .card-header h3,
+        body.theme-night .price {
+            position: relative;
+            color: #fff;
+            text-shadow: 0 4px 22px rgba(0, 0, 0, 0.22);
+        }
+
+        body.theme-night .price span {
+            color: rgba(255, 255, 255, 0.74);
+        }
+
+        body.theme-night .card-content {
+            color: #e7eaf6;
+        }
+
+        body.theme-night .card-content ul li {
+            color: #d5daed;
+        }
+
+        body.theme-night .card-content ul li::before {
+            color: #07101a;
+            background: linear-gradient(135deg, var(--theme-cyan), #ffffff);
+            box-shadow: 0 0 18px rgba(102, 232, 255, 0.34);
+        }
+
+        body.theme-night .card.yellow .card-content ul li::before {
+            background: linear-gradient(135deg, var(--theme-pink), #ffffff);
+            box-shadow: 0 0 18px rgba(255, 110, 199, 0.3);
+        }
+
+        body.theme-night .btn,
+        body.theme-night .cta-btn {
+            position: relative;
+            overflow: hidden;
+            color: #070913 !important;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+        }
+
+        body.theme-night .btn::before,
+        body.theme-night .cta-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -75%;
+            width: 45%;
+            transform: skewX(-22deg);
+            background: rgba(255, 255, 255, 0.54);
+            transition: left 0.5s ease;
+        }
+
+        body.theme-night .btn:hover::before,
+        body.theme-night .cta-btn:hover::before {
+            left: 135%;
+        }
+
+        body.theme-night .card.yellow .btn {
+            background: linear-gradient(135deg, #ffffff, var(--theme-pink));
+        }
+
+        body.theme-night .card.blue .btn {
+            background: linear-gradient(135deg, #ffffff, var(--theme-cyan));
+        }
+
+        body.theme-night .btn:hover,
+        body.theme-night .cta-btn:hover {
+            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.32), 0 0 28px rgba(102, 232, 255, 0.18);
+        }
+
+        body.theme-night .cta {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: radial-gradient(circle at 85% 10%, rgba(255, 110, 199, 0.25), transparent 34%), radial-gradient(circle at 15% 85%, rgba(102, 232, 255, 0.21), transparent 38%), linear-gradient(135deg, rgba(24, 30, 60, 0.96), rgba(10, 12, 25, 0.98));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 30px 90px rgba(0, 0, 0, 0.46);
+        }
+
+        body.theme-night .cta::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.3;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        body.theme-night .cta h3 {
+            color: transparent;
+            background: linear-gradient(110deg, #ffffff, #dce3ff 55%, var(--theme-cyan));
+            -webkit-background-clip: text;
+            background-clip: text;
+            filter: drop-shadow(0 8px 28px rgba(102, 232, 255, 0.14));
+        }
+
+        body.theme-night .cta-btn {
+            background: linear-gradient(135deg, #ffffff, var(--theme-cyan), var(--theme-purple));
+        }
+
+        @media (max-width: 480px) {
+            body.theme-night nav a {
+                color: var(--theme-text);
+                border-color: rgba(255, 255, 255, 0.14);
+                background: rgba(255, 255, 255, 0.055);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+            }
+
+            body.theme-night nav a:hover {
+                border-color: rgba(102, 232, 255, 0.45);
+                background: rgba(102, 232, 255, 0.08);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .logo-circle.theme-control,
+            body.theme-night .card,
+            body.theme-night .btn,
+            body.theme-night .cta-btn,
+            body.theme-night nav a,
+            body.theme-night nav a::after,
+            body.theme-night .btn::before,
+            body.theme-night .cta-btn::before {
+                transition: none !important;
+            }
+        }
+
     </style>
 
 </head>
@@ -586,8 +970,18 @@
 
             <div class="logo">
 
-                <div class="logo-circle black"></div>
-                <div class="logo-circle yellow"></div>
+                <button
+                    class="logo-circle black theme-control theme-initial"
+                    type="button"
+                    aria-label="Afficher le thème initial"
+                    aria-pressed="true"
+                ></button>
+                <button
+                    class="logo-circle yellow theme-control theme-night-toggle"
+                    type="button"
+                    aria-label="Afficher le thème nocturne premium"
+                    aria-pressed="false"
+                ></button>
 
                 <div class="logo-text">
                     Adaptabilité
@@ -1075,6 +1469,21 @@
         </div>
 
     </section>
+
+
+    <script>
+        const initialThemeToggle = document.querySelector('.theme-initial');
+        const nightThemeToggle = document.querySelector('.theme-night-toggle');
+
+        const setTheme = (useNightTheme) => {
+            document.body.classList.toggle('theme-night', useNightTheme);
+            initialThemeToggle.setAttribute('aria-pressed', String(!useNightTheme));
+            nightThemeToggle.setAttribute('aria-pressed', String(useNightTheme));
+        };
+
+        initialThemeToggle.addEventListener('click', () => setTheme(false));
+        nightThemeToggle.addEventListener('click', () => setTheme(true));
+    </script>
 
 </body>
 
